@@ -3,8 +3,10 @@ let userSeq=[];
 let h2=document.querySelector("h2");
 let btns=["yellow","red","purple","green"];
 /*4 buttons
-let started=false;
 */
+let started=false;
+
+
 /*
 abhi tk start nhi huwa hai or Ye ek flag (switch) hai means 
 false → game start nahi hua
