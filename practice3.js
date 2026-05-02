@@ -7,8 +7,7 @@ let level = 0;
 
 let h2 = document.querySelector("h2");
 
-// Game start karne ke liye event listener
-// Note: Keypress use karna better hota hai taaki buttons click karne par game reset na ho
+
 document.addEventListener("click", function () {
     if (started == false) {
         console.log("game is started");
@@ -32,7 +31,7 @@ function userFlash(btn) {
 }
 
 function levelup() {
-    userSeq = []; // Har level pe user sequence reset hoga
+    userSeq = []; 
     level++;
     h2.innerText = `Level ${level}`;
 
@@ -51,9 +50,8 @@ function checkAns(idx) {
             setTimeout(levelup, 1000);
         }
     } else {
-        // Game Over Logic
-        // Backticks (`) hi use karein taaki ${level} kaam kare
-        h2.innerHTML = `Game Over! Your Score Was <b>${level}</b><br> Press Any Key To Start.`;
+        
+        h2.innerHTML = `Game Over! Your Score Was <b>${level}</b><br> Click Simon Game Button To Start The game Again`;
         
         document.querySelector("body").style.backgroundColor = "red";
         setTimeout(function () {
@@ -69,7 +67,7 @@ function btnpress(event) {
     let btn = this;
     userFlash(btn);
 
-    let userColor = btn.getAttribute("id"); // 'let' lagana zaroori hai
+    let userColor = btn.getAttribute("id"); 
     userSeq.push(userColor);
 
     checkAns(userSeq.length - 1);
