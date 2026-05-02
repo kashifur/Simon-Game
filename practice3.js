@@ -13,7 +13,7 @@ false → game start nahi hua
 true → game start ho chuka hai
 */
 let level=0;//start nhi huwa hai to level 0 hai
-document.addEventListener("keypress",function(){
+document.addEventListener("keydown",function(){
     /*
     jb bhi user koi bhi keyword dbaye ga to niche 
     wala function execute hoga
