@@ -9,7 +9,7 @@ let h2 = document.querySelector("h2");
 
 // Game start karne ke liye event listener
 // Note: Keypress use karna better hota hai taaki buttons click karne par game reset na ho
-document.body.addEventListener("click", function () {
+document.addEventListener("click", function () {
     if (started == false) {
         console.log("game is started");
         started = true;
@@ -64,7 +64,8 @@ function checkAns(idx) {
     }
 }
 
-function btnpress() {
+function btnpress(event) {
+    event.stopPropagation();
     let btn = this;
     userFlash(btn);
 
