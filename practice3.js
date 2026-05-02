@@ -60,6 +60,7 @@ function checkAns(idx) {
 
         reset();
     }
+
 }
 
 function btnpress(event) {
@@ -83,5 +84,9 @@ function reset() {
     gameSeq = [];
     userSeq = [];
     level = 0;
+
 }
+
+
+
 //finally completed
